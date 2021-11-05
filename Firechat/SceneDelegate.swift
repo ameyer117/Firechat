@@ -17,6 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
         let nav = UINavigationController(rootViewController: ConversationsViewController())
+        nav.navigationBar.barStyle = .black
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
