@@ -7,6 +7,12 @@
 
 import UIKit
 
+extension CGRect {
+    init(height: CGFloat, width: CGFloat) {
+        self.init(x: 0, y: 0, width: width, height: height)
+    }
+}
+
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
                 left: NSLayoutXAxisAnchor? = nil,

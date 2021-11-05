@@ -20,6 +20,9 @@
 		70F73703273569D80040B323 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F73702273569D80040B323 /* LoginController.swift */; };
 		70F73705273569E00040B323 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F73704273569E00040B323 /* RegistrationController.swift */; };
 		70F7370727356D2B0040B323 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7370627356D2B0040B323 /* Extensions.swift */; };
+		70F73709273587300040B323 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F73708273587300040B323 /* InputContainerView.swift */; };
+		70F7370B27358B120040B323 /* InputContainerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7370A27358B120040B323 /* InputContainerTextField.swift */; };
+		70F7370D27358D840040B323 /* InputContainerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7370C27358D840040B323 /* InputContainerImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		70F73702273569D80040B323 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		70F73704273569E00040B323 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		70F7370627356D2B0040B323 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		70F73708273587300040B323 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
+		70F7370A27358B120040B323 /* InputContainerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerTextField.swift; sourceTree = "<group>"; };
+		70F7370C27358D840040B323 /* InputContainerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,9 @@
 		70F736F927355C3A0040B323 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70F73708273587300040B323 /* InputContainerView.swift */,
+				70F7370A27358B120040B323 /* InputContainerTextField.swift */,
+				70F7370C27358D840040B323 /* InputContainerImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,6 +336,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F736CE27355C2F0040B323 /* ViewController.swift in Sources */,
+				70F73709273587300040B323 /* InputContainerView.swift in Sources */,
+				70F7370B27358B120040B323 /* InputContainerTextField.swift in Sources */,
+				70F7370D27358D840040B323 /* InputContainerImageView.swift in Sources */,
 				70F736CA27355C2F0040B323 /* AppDelegate.swift in Sources */,
 				70F736CC27355C2F0040B323 /* SceneDelegate.swift in Sources */,
 				70F7370027355C800040B323 /* ConversationsControllerViewController.swift in Sources */,
