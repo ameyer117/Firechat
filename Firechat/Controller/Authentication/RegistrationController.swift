@@ -67,6 +67,7 @@ class RegistrationController: UIViewController {
     
     private let signUpButton: UIButton = {
         let button = OnboardingButton(title: "Sign Up")
+        button.isEnabled = false
         return button
     }()
     

@@ -32,6 +32,7 @@ class LoginController: UIViewController {
     
     private let loginButton: UIButton = {
         let button = OnboardingButton(title: "Log In")
+        button.isEnabled = false
         return button
     }()
     
