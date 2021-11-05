@@ -34,8 +34,8 @@ class LoginController: UIViewController {
         let button = UIButton()
         button.setTitle("Log In", for: .normal)
         button.layer.cornerRadius = 5
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.backgroundColor = .systemRed
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.backgroundColor = .systemPink
         button.setHeight(height: 50)
         return button
     }()
@@ -51,8 +51,23 @@ class LoginController: UIViewController {
         return textField
     }()
     
-    // MARK: - Lifecycle
+    private let dontHaveAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        let attributedTitle = NSMutableAttributedString(string: "Don't have an account? ", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.white])
+        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [.font: UIFont.boldSystemFont(ofSize: 16), .foregroundColor: UIColor.white]))
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        return button
+    }()
     
+    // MARK: - Selectors
+    @objc func handleShowSignUp() {
+        let controller = RegistrationController()
+        
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureGradientLayer()
@@ -80,6 +95,10 @@ class LoginController: UIViewController {
         stack.spacing = 16
         view.addSubview(stack)
         stack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: 32)
+        
+        view.addSubview(dontHaveAccountButton)
+        dontHaveAccountButton.centerX(inView: view)
+        dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
     
     func configureGradientLayer() {
