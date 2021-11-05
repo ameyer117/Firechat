@@ -17,6 +17,9 @@
 		70F736EB27355C300040B323 /* FirechatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F736EA27355C300040B323 /* FirechatUITests.swift */; };
 		70F736ED27355C300040B323 /* FirechatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F736EC27355C300040B323 /* FirechatUITestsLaunchTests.swift */; };
 		70F7370027355C800040B323 /* ConversationsControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F736FF27355C800040B323 /* ConversationsControllerViewController.swift */; };
+		70F73703273569D80040B323 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F73702273569D80040B323 /* LoginController.swift */; };
+		70F73705273569E00040B323 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F73704273569E00040B323 /* RegistrationController.swift */; };
+		70F7370727356D2B0040B323 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7370627356D2B0040B323 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		70F736EA27355C300040B323 /* FirechatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirechatUITests.swift; sourceTree = "<group>"; };
 		70F736EC27355C300040B323 /* FirechatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirechatUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		70F736FF27355C800040B323 /* ConversationsControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsControllerViewController.swift; sourceTree = "<group>"; };
+		70F73702273569D80040B323 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		70F73704273569E00040B323 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		70F7370627356D2B0040B323 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 		70F736FB27355C450040B323 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				70F73701273569CB0040B323 /* Authentication */,
 				70F736FF27355C800040B323 /* ConversationsControllerViewController.swift */,
 			);
 			path = Controller;
@@ -174,8 +181,18 @@
 		70F736FE27355C690040B323 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				70F7370627356D2B0040B323 /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		70F73701273569CB0040B323 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				70F73702273569D80040B323 /* LoginController.swift */,
+				70F73704273569E00040B323 /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +330,9 @@
 				70F736CA27355C2F0040B323 /* AppDelegate.swift in Sources */,
 				70F736CC27355C2F0040B323 /* SceneDelegate.swift in Sources */,
 				70F7370027355C800040B323 /* ConversationsControllerViewController.swift in Sources */,
+				70F73705273569E00040B323 /* RegistrationController.swift in Sources */,
+				70F73703273569D80040B323 /* LoginController.swift in Sources */,
+				70F7370727356D2B0040B323 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
