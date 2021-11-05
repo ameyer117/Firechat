@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		705C67B32735D06C003B181E /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C67B22735D06C003B181E /* OnboardingButton.swift */; };
+		705C67B52735D1B4003B181E /* OnboardingSwitchFlowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C67B42735D1B4003B181E /* OnboardingSwitchFlowButton.swift */; };
+		705C67B72735DB9F003B181E /* HighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C67B62735DB9F003B181E /* HighlightedButton.swift */; };
 		70F736CA27355C2F0040B323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F736C927355C2F0040B323 /* AppDelegate.swift */; };
 		70F736CC27355C2F0040B323 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F736CB27355C2F0040B323 /* SceneDelegate.swift */; };
 		70F736CE27355C2F0040B323 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F736CD27355C2F0040B323 /* ViewController.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		705C67B22735D06C003B181E /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
+		705C67B42735D1B4003B181E /* OnboardingSwitchFlowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwitchFlowButton.swift; sourceTree = "<group>"; };
+		705C67B62735DB9F003B181E /* HighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedButton.swift; sourceTree = "<group>"; };
 		70F736C627355C2F0040B323 /* Firechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F736C927355C2F0040B323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70F736CB27355C2F0040B323 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +159,9 @@
 				70F73708273587300040B323 /* InputContainerView.swift */,
 				70F7370A27358B120040B323 /* InputContainerTextField.swift */,
 				70F7370C27358D840040B323 /* InputContainerImageView.swift */,
+				705C67B22735D06C003B181E /* OnboardingButton.swift */,
+				705C67B42735D1B4003B181E /* OnboardingSwitchFlowButton.swift */,
+				705C67B62735DB9F003B181E /* HighlightedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705C67B52735D1B4003B181E /* OnboardingSwitchFlowButton.swift in Sources */,
 				70F736CE27355C2F0040B323 /* ViewController.swift in Sources */,
 				70F73709273587300040B323 /* InputContainerView.swift in Sources */,
 				70F7370B27358B120040B323 /* InputContainerTextField.swift in Sources */,
@@ -343,7 +353,9 @@
 				70F736CC27355C2F0040B323 /* SceneDelegate.swift in Sources */,
 				70F7370027355C800040B323 /* ConversationsControllerViewController.swift in Sources */,
 				70F73705273569E00040B323 /* RegistrationController.swift in Sources */,
+				705C67B72735DB9F003B181E /* HighlightedButton.swift in Sources */,
 				70F73703273569D80040B323 /* LoginController.swift in Sources */,
+				705C67B32735D06C003B181E /* OnboardingButton.swift in Sources */,
 				70F7370727356D2B0040B323 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

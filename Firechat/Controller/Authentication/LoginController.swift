@@ -31,12 +31,7 @@ class LoginController: UIViewController {
     }()
     
     private let loginButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Log In", for: .normal)
-        button.layer.cornerRadius = 5
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.backgroundColor = .systemPink
-        button.setHeight(height: 50)
+        let button = OnboardingButton(title: "Log In")
         return button
     }()
     
@@ -52,10 +47,7 @@ class LoginController: UIViewController {
     }()
     
     private let dontHaveAccountButton: UIButton = {
-        let button = UIButton(type: .system)
-        let attributedTitle = NSMutableAttributedString(string: "Don't have an account? ", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.white])
-        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [.font: UIFont.boldSystemFont(ofSize: 16), .foregroundColor: UIColor.white]))
-        button.setAttributedTitle(attributedTitle, for: .normal)
+        let button = OnboardingSwitchFlowButton(description: "Don't have an account?", callToAction: "Sign Up")
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
@@ -100,12 +92,5 @@ class LoginController: UIViewController {
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
-    
-    func configureGradientLayer() {
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor]
-        gradient.locations = [0,1]
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.frame
-    }
+
 }
