@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseAuth
 
 class RegistrationController: UIViewController {
     
@@ -74,6 +76,7 @@ class RegistrationController: UIViewController {
     
     private let signUpButton: UIButton = {
         let button = OnboardingButton(title: "Sign Up")
+        button.addTarget(self, action: #selector(signUpUser), for: .touchUpInside)
         button.isEnabled = false
         return button
     }()
@@ -91,6 +94,10 @@ class RegistrationController: UIViewController {
     }
     
     // MARK: - Selectors
+    @objc func signUpUser() {
+        viewModel.registerUser()
+    }
+    
     @objc func handleSelectPhoto() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -103,13 +110,13 @@ class RegistrationController: UIViewController {
     
     @objc func textDidChange(_ sender: UITextField) {
         if sender == emailTextField {
-            emailTextField.text = sender.text
+            viewModel.email = sender.text
         } else if sender == passwordTextField {
-            passwordTextField.text = sender.text
+            viewModel.password = sender.text
         } else if sender == usernameTextField {
-            usernameTextField.text = sender.text
+            viewModel.username = sender.text
         } else if sender == fullNameTextField {
-            fullNameTextField.text = sender.text
+            viewModel.fullName = sender.text
         }
         
         signUpButton.isEnabled = viewModel.formIsValid
@@ -157,6 +164,9 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         plusPhotoButton.layer.borderWidth = 3.0
         plusPhotoButton.layer.cornerRadius = 200 / 2
         plusPhotoButton.imageView?.contentMode = .scaleAspectFill
+        viewModel.profileImageData = image?.jpegData(compressionQuality: 0.3)
+        signUpButton.isEnabled = viewModel.formIsValid
+        
         dismiss(animated: true, completion: nil)
     }
 }
