@@ -26,6 +26,7 @@
 		70F73709273587300040B323 /* InputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F73708273587300040B323 /* InputContainerView.swift */; };
 		70F7370B27358B120040B323 /* InputContainerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7370A27358B120040B323 /* InputContainerTextField.swift */; };
 		70F7370D27358D840040B323 /* InputContainerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7370C27358D840040B323 /* InputContainerImageView.swift */; };
+		70F7599E2736BF5C0037C4FF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7599D2736BF5C0037C4FF /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		70F73708273587300040B323 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		70F7370A27358B120040B323 /* InputContainerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerTextField.swift; sourceTree = "<group>"; };
 		70F7370C27358D840040B323 /* InputContainerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerImageView.swift; sourceTree = "<group>"; };
+		70F7599D2736BF5C0037C4FF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Firechat/View/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		70F736FA27355C400040B323 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				70F7599D2736BF5C0037C4FF /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				70F7370B27358B120040B323 /* InputContainerTextField.swift in Sources */,
 				70F7370D27358D840040B323 /* InputContainerImageView.swift in Sources */,
 				70F736CA27355C2F0040B323 /* AppDelegate.swift in Sources */,
+				70F7599E2736BF5C0037C4FF /* LoginViewModel.swift in Sources */,
 				70F736CC27355C2F0040B323 /* SceneDelegate.swift in Sources */,
 				70F7370027355C800040B323 /* ConversationsControllerViewController.swift in Sources */,
 				70F73705273569E00040B323 /* RegistrationController.swift in Sources */,

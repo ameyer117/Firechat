@@ -10,6 +10,7 @@ import UIKit
 class LoginController: UIViewController {
     
     // MARK: - Properties
+    private var viewModel = LoginViewModel()
     
     private let iconImage: UIImageView = {
         let iv = UIImageView()
@@ -33,16 +34,19 @@ class LoginController: UIViewController {
     private let loginButton: UIButton = {
         let button = OnboardingButton(title: "Log In")
         button.isEnabled = false
+        button.addTarget(self, action: #selector(loginUser), for: .touchUpInside)
         return button
     }()
     
     private let emailTextField: InputContainerTextField = {
         let textField = InputContainerTextField(placeholder: "Email")
+        textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         return textField
     }()
     
     private let passwordTextField: InputContainerTextField = {
         let textField = InputContainerTextField(placeholder: "Password")
+        textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         textField.isSecureTextEntry = true
         return textField
     }()
@@ -60,6 +64,20 @@ class LoginController: UIViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     
+    @objc func textDidChange(_ sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == passwordTextField {
+            viewModel.password = sender.text
+        }
+        
+        checkFormStatus()
+    }
+    
+    @objc func loginUser() {
+        print("DEBUG: HANDLE LOGIN!")
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +87,10 @@ class LoginController: UIViewController {
     }
     
     // MARK: - Helpers
+    func checkFormStatus() {
+        loginButton.isEnabled = viewModel.formIsValid
+    }
+    
     func configureUI() {
         navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .systemRed
