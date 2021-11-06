@@ -95,7 +95,16 @@ class RegistrationController: UIViewController {
     
     // MARK: - Selectors
     @objc func signUpUser() {
-        viewModel.registerUser()
+        viewModel.registerUser { error in
+            if let error = error {
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc func handleSelectPhoto() {

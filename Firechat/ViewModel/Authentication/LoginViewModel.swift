@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 struct LoginViewModel: FormValidationProtocol {
     var email: String?
@@ -13,5 +14,11 @@ struct LoginViewModel: FormValidationProtocol {
     
     var formIsValid: Bool {
         return email?.isEmpty == false && password?.isEmpty == false
+    }
+    
+    func loginUser(completion: ((AuthDataResult?, Error?) -> Void)? = nil) {
+        guard let email = email else { return }
+        guard let password = password else { return }
+        Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
 }

@@ -75,7 +75,14 @@ class LoginController: UIViewController {
     }
     
     @objc func loginUser() {
-        print("DEBUG: HANDLE LOGIN!")
+        viewModel.loginUser {result, error in
+            if let error = error {
+                print("Sign in failed: \(error.localizedDescription)")
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     // MARK: - Lifecycle

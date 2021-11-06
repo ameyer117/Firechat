@@ -21,7 +21,7 @@ struct RegistrationViewModel: FormValidationProtocol {
         return email?.isEmpty == false && password?.isEmpty == false && fullName?.isEmpty == false && username?.isEmpty == false && profileImageData != nil
     }
     
-    func registerUser() {
+    func registerUser(completion: ((Error?) -> Void)? = nil) {
         guard let imageData = profileImageData else { return }
         guard let email = email else { return }
         guard let password = password else { return }
@@ -42,6 +42,9 @@ struct RegistrationViewModel: FormValidationProtocol {
                 Auth.auth().createUser(withEmail: email, password: password) { result, error in
                     if let error = error {
                         print("Failed to create user: \(error.localizedDescription)")
+                        if let completion = completion {
+                            completion(error)
+                        }
                         return
                     }
                     
@@ -58,10 +61,11 @@ struct RegistrationViewModel: FormValidationProtocol {
                     Firestore.firestore().collection("users").document(uid).setData(data) { error in
                         if let error = error {
                             print("Firestore error: \(error.localizedDescription)")
-                            return
                         }
                         
-                        print("Hooray go check firestore!")
+                        if let completion = completion {
+                            completion(error)
+                        }
                     }
                     
                 }
