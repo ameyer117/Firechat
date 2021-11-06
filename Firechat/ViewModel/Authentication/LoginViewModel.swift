@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct LoginViewModel {
+struct LoginViewModel: FormValidationProtocol {
     var email: String?
     var password: String?
     

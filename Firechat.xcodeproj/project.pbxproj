@@ -27,6 +27,8 @@
 		70F7370B27358B120040B323 /* InputContainerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7370A27358B120040B323 /* InputContainerTextField.swift */; };
 		70F7370D27358D840040B323 /* InputContainerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7370C27358D840040B323 /* InputContainerImageView.swift */; };
 		70F7599E2736BF5C0037C4FF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7599D2736BF5C0037C4FF /* LoginViewModel.swift */; };
+		70F759A02736CBE40037C4FF /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F7599F2736CBE40037C4FF /* RegistrationViewModel.swift */; };
+		70F759A52736CE170037C4FF /* FormValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F759A42736CE170037C4FF /* FormValidationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +72,9 @@
 		70F73708273587300040B323 /* InputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerView.swift; sourceTree = "<group>"; };
 		70F7370A27358B120040B323 /* InputContainerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerTextField.swift; sourceTree = "<group>"; };
 		70F7370C27358D840040B323 /* InputContainerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputContainerImageView.swift; sourceTree = "<group>"; };
-		70F7599D2736BF5C0037C4FF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Firechat/View/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
+		70F7599D2736BF5C0037C4FF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Firechat/ViewModel/Authentication/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
+		70F7599F2736CBE40037C4FF /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegistrationViewModel.swift; path = Firechat/ViewModel/Authentication/RegistrationViewModel.swift; sourceTree = SOURCE_ROOT; };
+		70F759A42736CE170037C4FF /* FormValidationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +175,7 @@
 		70F736FA27355C400040B323 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				70F7599D2736BF5C0037C4FF /* LoginViewModel.swift */,
+				70F759A12736CBF50037C4FF /* Authentication */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -195,6 +199,7 @@
 		70F736FD27355C510040B323 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				70F759A42736CE170037C4FF /* FormValidationProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +217,15 @@
 			children = (
 				70F73702273569D80040B323 /* LoginController.swift */,
 				70F73704273569E00040B323 /* RegistrationController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		70F759A12736CBF50037C4FF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				70F7599D2736BF5C0037C4FF /* LoginViewModel.swift */,
+				70F7599F2736CBE40037C4FF /* RegistrationViewModel.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -355,8 +369,10 @@
 				70F736CA27355C2F0040B323 /* AppDelegate.swift in Sources */,
 				70F7599E2736BF5C0037C4FF /* LoginViewModel.swift in Sources */,
 				70F736CC27355C2F0040B323 /* SceneDelegate.swift in Sources */,
+				70F759A52736CE170037C4FF /* FormValidationProtocol.swift in Sources */,
 				70F7370027355C800040B323 /* ConversationsControllerViewController.swift in Sources */,
 				70F73705273569E00040B323 /* RegistrationController.swift in Sources */,
+				70F759A02736CBE40037C4FF /* RegistrationViewModel.swift in Sources */,
 				705C67B72735DB9F003B181E /* HighlightedButton.swift in Sources */,
 				70F73703273569D80040B323 /* LoginController.swift in Sources */,
 				705C67B32735D06C003B181E /* OnboardingButton.swift in Sources */,
